@@ -1,0 +1,28 @@
+# IntelStrike
+# Requirements
+#
+# Install: pip install -r requirements.txt
+#
+# Required environment variables:
+#   export TAVILY_API_KEY="your-key"       # https://tavily.com (free tier available)
+#
+# Set ONE of the following LLM provider keys:
+#   export ANTHROPIC_API_KEY="your-key"    # https://console.anthropic.com
+#   export OPENAI_API_KEY="your-key"       # https://platform.openai.com
+#   export GOOGLE_API_KEY="your-key"       # https://aistudio.google.com
+#   export GROQ_API_KEY="your-key"         # https://console.groq.com (free tier)
+#   Ollama: no key needed — run: ollama pull llama3.2
+
+# ── Core (required) ───────────────────────────────────────────────────────────
+
+crewai>=0.80.0
+crewai-tools>=0.17.0
+tavily-python>=0.5.0
+
+# ── LLM Providers (install the one you need) ──────────────────────────────────
+
+anthropic>=0.40.0          # Anthropic Claude  — default
+# openai>=1.0.0            # OpenAI GPT
+# google-generativeai>=0.8 # Google Gemini
+# groq>=0.11.0             # Groq (fast inference, free tier)
+# ollama>=0.3.0            # Ollama (local models, no API key needed)
